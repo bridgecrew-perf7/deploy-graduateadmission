@@ -139,7 +139,30 @@
                 <h1 class="text-2xl mb-8">
                     Your Admission Chance is ...
                 </h1>
-                
+                {% if (chanceOfAdmit) != 0 %}
+                <h4 class="text-5xl font-bold"> You'll most likely get admitted to the Graduate School!</h4>
+                <div class="mt-8">
+                    <p>GRE Score: {{ GRE }}</p>
+                    <p>TOEFL Score: {{ TOEFL }}</p>
+                    <p>University Rating: {{ UnivRating }}</p>
+                    <p>Statement of Purpose Strength: {{ SOP }}</p>
+                    <p>Letter of Recommendation Strength: {{ LOR }}</p>
+                    <p>Undergraduate GPA : {{ CGPA }}</p>
+                    <p>Research Experience : {{ Research }}</p>
+                </div>
+                {% endif %}
+                {% if (chanceOfAdmit) == 0 %}
+                <h4 class="text-5xl font-bold"> You'll need more effort before getting admitted to the Graduate School!</h4>
+                <div class="mt-8">
+                    <p>GRE Score: {{ GRE }}</p>
+                    <p>TOEFL Score: {{ TOEFL }}</p>
+                    <p>University Rating: {{ UnivRating }}</p>
+                    <p>Statement of Purpose Strength: {{ SOP }}</p>
+                    <p>Letter of Recommendation Strength: {{ LOR }}</p>
+                    <p>Undergraduate GPA : {{ CGPA }}</p>
+                    <p>Research Experience : {{ Research }}</p>
+                </div>
+                {% endif %}
                
             </div>
             <div class="flex justify-around bg-white p-16 rounded-lg mt-8">
